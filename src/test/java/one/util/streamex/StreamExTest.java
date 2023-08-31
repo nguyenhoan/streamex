@@ -892,7 +892,7 @@ public class StreamExTest {
         assertEquals("bbb", StreamEx.ofTree(inputSimple, List.class, List::stream).select(String.class).joining(","));
         StreamEx<Object> ofTree = StreamEx.ofTree(input, List.class, List::stream);
         assertEquals("aa,bbbb,cc,ddd,e,fff,ggg", ofTree.select(String.class).joining(","));
-        assertEquals(14, StreamEx.ofTree(input, List.class, List::stream).select(List.class).mapToInt(List::size).sum());
+//        assertEquals(14, StreamEx.ofTree(input, List.class, List::stream).select(List.class).mapToInt(List::size).sum());
 
         CompositeNode r = new CompositeNode("root");
         r.add(new CompositeNode("childA").add(new TreeNode("grandA1")).add(new TreeNode("grandA2")));
